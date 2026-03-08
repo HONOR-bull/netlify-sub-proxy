@@ -1,0 +1,14 @@
+[build]
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  
+[dev]
+  functions = "netlify/functions"
+  publish = "."
+
+[[redirects]]
+  from = "/sub"
+  to = "/.netlify/functions/sub"
+  status = 200
